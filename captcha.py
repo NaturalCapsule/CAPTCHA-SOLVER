@@ -91,19 +91,4 @@ score = model.evaluate(X_test,[y_test[0], y_test[1], y_test[2], y_test[3], y_tes
 
 print('Test Loss and accuracy:', score)
 
-# def preprocess_image(image_path, img_shape):
-#     # Load the image in grayscale
-#     captcha_cv2 = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-#
-#     # Resize if necessary
-#     captcha_cv2 = cv2.resize(captcha_cv2, (img_shape[1], img_shape[0]))
-#
-#     # Normalize and reshape
-#     captcha_cv2 = captcha_cv2.astype(np.float32) / 255.0
-#     captcha_cv2 = np.reshape(captcha_cv2, img_shape)
-#
-#     # Add batch dimension (1, 50, 200, 1)
-#     captcha_cv2 = np.expand_dims(captcha_cv2, axis=0)
-#
-#     return captcha_cv2
 model.save('model.h5')
